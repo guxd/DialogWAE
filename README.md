@@ -1,49 +1,50 @@
 # DialogWAE
 
 It is a PyTorch implementation of the DialogWAE model described in
-**DialogWAE: Multimodal Response Generation with Conditional Wasserstein Auto-Encoder**.
-See the [paper](https://arxiv.org/abs/1805.12352) for more details. 
+[**DialogWAE: Multimodal Response Generation with Conditional Wasserstein Auto-Encoder**](https://arxiv.org/abs/1805.12352). 
 
-# Prerequisites
+## Prerequisites
  - PyTorch 0.4.0
  - Python 3.6
  - Numpy
  - NLTK
- - You may need to pip install beeprint if the module is missing
+ ```
+ pip install -r requirements.txt
+ ```
 
-# Usage
 ## Train
 - Use pre-trained Word2vec
-Download Glove word embeddings from https://nlp.stanford.edu/projects/glove/
-The default setting use 200 dimension word embedding trained on Twitter.
+  Download Glove word embeddings `glove.twitter.27B.200d.txt` from https://nlp.stanford.edu/projects/glove/
+  The default setting use 200 dimension word embedding trained on Twitter.
 
-At last, set **word2vec_path** at line 15 of train.py.
-
-- Modify the arguments at the top of train.py as follows:
+- Modify the arguments at the top of `train.py`
 
 - Train model by
-    ```python train.py```
+  ```
+    python train.py
+  ```
 The logs and temporary results will be printed to stdout and saved in the `./output` path.
 
-## Test
-Modify the arguments at the bottom of sample.py
+## Evaluation
+Modify the arguments at the bottom of `sample.py`
     
 Run model testing by:
-
+```
     python sample.py
+```
 The outputs will be printed to stdout and generated responses will be saved at `results.txt` in the `./output` path.
 
 
-# References 
-If you use any source code included in this toolkit in your work, please cite the following paper. The bibtex are listed below:
- 
-    [Gu et al, 2018]:
-     @article{gu2018dialogwae,
+## References 
+If you use any source code included in this toolkit in your work, please cite the following paper:
+```
+@inproceedings{gu2018dialogwae,
       title={Dialog{WAE}: Multimodal Response Generation with Conditional Wasserstein Auto-Encoder},
       author={Gu, Xiaodong and Cho, Kyunghyun and Ha, Jung-Woo and Kim, Sunghun},
       journal={arXiv preprint arXiv:1805.12352},
       year={2018}
-    }
+}
+```
 
 # LICENSE
 

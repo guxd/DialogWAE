@@ -206,7 +206,7 @@ for epoch in range(start_epoch, config['epochs']+1):
         itr_global+=1
         
         
-    if epoch % args.eval_every == 0:  # evaluate the model in the development set
+    if epoch % args.eval_every == 0:  # evaluate the model in the validation set
         model.eval()               
         valid_loader.epoch_init(1, config['diaglen'], 1, shuffle=False) 
         
