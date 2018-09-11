@@ -1,3 +1,4 @@
+
 def config_DialogWAE():
     conf = {
     'maxlen':40, # maximum utterance length

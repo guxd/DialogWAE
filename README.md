@@ -3,10 +3,9 @@
 It is a PyTorch implementation of the DialogWAE model described in
 [**DialogWAE: Multimodal Response Generation with Conditional Wasserstein Auto-Encoder**](https://arxiv.org/abs/1805.12352). 
 
-## Prerequisites
+## Dependency
  - PyTorch 0.4.0
  - Python 3.6
- - Numpy
  - NLTK
  ```
  pip install -r requirements.txt
@@ -14,16 +13,20 @@ It is a PyTorch implementation of the DialogWAE model described in
 
 ## Train
 - Use pre-trained Word2vec
-  Download Glove word embeddings `glove.twitter.27B.200d.txt` from https://nlp.stanford.edu/projects/glove/
-  The default setting use 200 dimension word embedding trained on Twitter.
+  Download Glove word embeddings `glove.twitter.27B.200d.txt` from https://nlp.stanford.edu/projects/glove/ and save it to the `./data` folder. The default setting use 200 dimension word embedding trained on Twitter.
 
 - Modify the arguments at the top of `train.py`
 
 - Train model by
   ```
-    python train.py
+    python train.py --visual
   ```
 The logs and temporary results will be printed to stdout and saved in the `./output` path.
+
+- Visualize the training status in Tensorboard
+  ```
+    tensorboard --logdir output
+  ```
 
 ## Evaluation
 Modify the arguments at the bottom of `sample.py`

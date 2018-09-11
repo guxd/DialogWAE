@@ -1,3 +1,6 @@
+# Copied from https://github.com/ruotianluo/NeuralDialog-CVAE-pytorch/blob/master/data_apis/corpus.py
+# Copyright (C) 2017 Tiancheng Zhao, Carnegie Mellon University
+
 import pickle as pkl
 from collections import Counter
 import numpy as np
